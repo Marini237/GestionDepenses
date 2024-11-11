@@ -5,6 +5,7 @@ import { Budget, Transaction } from "@/type";
 const prisma = new PrismaClient();
 
 export async function checkAndAdduser(email: string | undefined) {
+  console.log("Email reçu dans checkAndAddUser:", email);
   if (!email) return;
   try {
     const existingUser = await prisma.user.findUnique({
