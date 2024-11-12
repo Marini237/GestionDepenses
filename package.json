@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "prisma generate && next build",
-    "dev": "next dev --turbopack",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "build": "prisma generate && next build",
+  "postinstall": "prisma generate",
+  "dev": "next dev",
+  "start": "next start",
+  "lint": "next lint"
+},
   "dependencies": {
     "@clerk/nextjs": "^6.2.1",
     "@prisma/client": "^5.22.0",
