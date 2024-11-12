@@ -48,7 +48,10 @@ const Page = () => {
         const budgetData = await getUserBudgetData(email);
         const lastTransactions = await getLastTransactions(email);
         const lastBudgets = await getLastBudgets(email);
-        setReachedBudgetRatio(reachedBudget);
+        if (reachedBudget !== undefined) {
+          setReachedBudgetRatio(parseFloat(reachedBudget));
+      }
+      
         if (count !== undefined) {
           setTotalCount(count);
         }
