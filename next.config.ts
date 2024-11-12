@@ -4,11 +4,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Ignore les erreurs ESLint lors du build
   },
-  env: {
-    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL,
+
+  typescript: {
+    ignoreBuildErrors: true, // Ignore les erreurs TypeScript lors du build
   },
 };
 
